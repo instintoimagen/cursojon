@@ -14,12 +14,13 @@ export default class Estado extends Component {
     this.state = {
       contador: 0,
     };
-    setInterval(() => {
+
+    /* setInterval(() => {
       // Dentro de un this.setState, porque no podemos modificarlo directamente, ya que el estado (contador) es INMUTABLE en React.
       this.setState({
         contador: this.state.contador + 1,
       });
-    }, 1000);
+    }, 1000); */
   }
 
   render() {
