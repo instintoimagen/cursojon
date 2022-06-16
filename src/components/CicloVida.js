@@ -6,7 +6,7 @@ class Reloj extends Component {
   }
 
   componentWillUnmount() {
-    console.log(3, "El componente ha sido eliminado del DOM");
+    // console.log(3, "El componente ha sido eliminado del DOM");
   }
 
   render() {
@@ -17,7 +17,7 @@ class Reloj extends Component {
 export default class CicloVida extends Component {
   constructor(props) {
     super(props);
-    console.log(0, "El componente se inicializa, aún No está en el DOM");
+    // console.log(0, "El componente se inicializa, aún No está en el DOM");
 
     this.state = {
       hora: new Date().toLocaleTimeString(),
@@ -28,13 +28,13 @@ export default class CicloVida extends Component {
   }
 
   componentDidMount() {
-    console.log(1, "El componente ya se encuentra en el DOM");
+    //console.log(1, "El componente ya se encuentra en el DOM");
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(2, "El estado o las props del componente han CAMBIADO");
-    console.log(prevProps);
-    console.log(prevState);
+    //console.log(2, "El estado o las props del componente han CAMBIADO");
+    //console.log(prevProps);
+    //console.log(prevState);
   }
 
   tictac = () => {
@@ -59,18 +59,21 @@ export default class CicloVida extends Component {
   };
 
   render() {
-    console.log(
-      4,
-      "El componente se dibuja (o redibuja redibuja por algún cambio), en el DOM"
-    );
+    //console.log(4, "El componente se dibuja (o redibuja redibuja por algún cambio), en el DOM");
 
     return (
       <>
         <h3>Ciclo de Vida de los componentes de Clase</h3>
         <button onClick={this.iniciar}>Iniciar</button>
         <button onClick={this.detener}>Detener</button>
-        {this.state.visible && <Reloj hora={this.state.hora} />}
-        <hr />
+        {this.state.visible ? (
+          <Reloj hora={this.state.hora} />
+        ) : (
+          <>
+            <br /> <br />
+            <br /> <br />
+          </>
+        )}
       </>
     );
   }

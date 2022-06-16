@@ -32,7 +32,7 @@ export class EventosES6 extends Component {
       <div>
         <h3>Eventos en Componentes de Clases ES6</h3>
         <nav>
-          <h5>Toque los botones para sumar o restar</h5>
+          <h4>Toque los botones para sumar o restar</h4>
           <button onClick={this.sumar}>+</button>
           <button onClick={this.restar}>-</button>
         </nav>
@@ -69,8 +69,12 @@ export class EventosES7 extends Component {
     return (
       <div>
         <h3>Eventos en Componentes de Clases ES7</h3>
+        <p>
+          Con <strong>Propierties Initializer</strong>, no requiere
+          constructor() ni <i>bindeo</i>{" "}
+        </p>
         <nav>
-          <h5>Toque los botones para sumar o restar</h5>
+          <h4>Toque los botones para sumar o restar</h4>
           <button onClick={this.sumar}>+</button>
           <button onClick={this.restar}>-</button>
         </nav>

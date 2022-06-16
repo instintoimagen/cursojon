@@ -8,6 +8,11 @@ import RenderizadoElementos from "./components/RenderizadoElementos";
 import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos";
 import ComunicacionComponentes from "./components/ComunicacionComponentes";
 import CicloVida from "./components/CicloVida";
+import { AjaxApis } from "./components/AjaxApis";
+import ContadorHooks from "./components/ContadorHooks";
+import ScrollHooks from "./components/ScrollHooks";
+import RelojHooks from "./components/RelojHooks";
+import AjaxHooks from "./components/AjaxHooks";
 import "./App.css";
 
 function App() {
@@ -69,6 +74,21 @@ function App() {
           <ComunicacionComponentes />
           <hr />
           <CicloVida />
+          <hr />
+          <AjaxApis />
+          <hr />
+          <ContadorHooks titulo="pokemones vistos hoy." />
+          {/* Este texto como atributo del elemento <ContadorHooks /> en el app.js reemplaza título de las defaultProps */}
+          <hr />
+          <ScrollHooks />
+          <hr />
+          <RelojHooks />
+          <hr />
+          <AjaxHooks />
+          <br />
+          <br />
+          <br />
+          <br />
         </section>
       </header>
     </div>
