@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {
   const [data, setData] = useState(null);
-  const [isPendindig, setIsPendindig] = useState(true);
+  const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -20,17 +20,17 @@ export const useFetch = (url) => {
 
         let data = await res.json();
 
-        setIsPendindig(false);
+        setIsPending(false);
         setData(data);
         setError({ err: false });
       } catch (err) {
-        setIsPendindig(true);
-        setError(true);
+        setIsPending(true);
+        setError(err);
       }
     };
 
     getData(url);
   }, [url]);
 
-  return { data, isPendindig, error };
+  return { data, isPending, error };
 };
