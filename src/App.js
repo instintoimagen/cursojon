@@ -17,6 +17,8 @@ import HooksPersonalizados from "./components/HooksPersonalizados";
 import Referencias from "./components/Referencias";
 import FormularioSimple from "./components/FormularioSimple";
 import FormularioAvanzado from "./components/FormularioAvanzado";
+import Estilos from "./components/Estilos";
+import ComponentesEstilizados from "./components/ComponentesEstilizados";
 import "./App.css";
 
 function App() {
@@ -97,6 +99,10 @@ function App() {
           <FormularioSimple />
           <hr />
           <FormularioAvanzado />
+          <hr />
+          <Estilos />
+          <hr />
+          <ComponentesEstilizados />
           <br />
           <br />
           <br />
